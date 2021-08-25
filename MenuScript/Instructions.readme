@@ -1,0 +1,24 @@
+﻿R e a d m e
+-----------
+
+Place the following into the CustomData of any Block
+The Program supports multiple Menus
+Program has to be restarted to add new Menu
+Use W ans S to move Up and Down and E to select
+
+[menu]
+count=Count of options you want
+control=Name of cockpit
+screen=Name of screen
+surface=(Optional)Number of screen on same block
+option0=Option Name
+option1=Option Name
+option2=Option Name
+...
+selected=(Optional)Will be generated for saving
+
+[options]
+0=Name of TimerBlock for First Option
+1=Name of TimerBlock for Second Option
+...
+

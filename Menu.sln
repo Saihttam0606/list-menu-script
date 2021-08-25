@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Menu", "Menu\Menu.csproj", "{4158400D-03B2-4C27-9036-E62D6ACB0BFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuPreset", "MenuPreset\MenuPreset.csproj", "{AC5BC075-C04F-4050-B125-BFFD83B27679}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuScript", "MenuScript\MenuScript.csproj", "{E3CDF10C-B6D6-4B03-A2C1-BED3EB37E7B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4158400D-03B2-4C27-9036-E62D6ACB0BFA}.Debug|x64.ActiveCfg = Debug|x64
+		{4158400D-03B2-4C27-9036-E62D6ACB0BFA}.Debug|x64.Build.0 = Debug|x64
+		{AC5BC075-C04F-4050-B125-BFFD83B27679}.Debug|x64.ActiveCfg = Debug|x64
+		{AC5BC075-C04F-4050-B125-BFFD83B27679}.Debug|x64.Build.0 = Debug|x64
+		{E3CDF10C-B6D6-4B03-A2C1-BED3EB37E7B9}.Debug|x64.ActiveCfg = Debug|x64
+		{E3CDF10C-B6D6-4B03-A2C1-BED3EB37E7B9}.Debug|x64.Build.0 = Debug|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {396950A0-AA34-4DA1-9721-05C3BED7CC6C}
+	EndGlobalSection
+EndGlobal
