@@ -33,6 +33,9 @@ namespace IngameScript
             private bool rowBool;
             private int rowCount;
 
+            private int showableRows;
+            private int start;
+
             private bool canSelect;
 
             private List<string> optionNames;
@@ -78,6 +81,9 @@ namespace IngameScript
                     row = ini.Get("menu", "selected").ToInt32();
                 }
 
+                showableRows = (int)(textSurface.SurfaceSize.Y / textSurface.MeasureStringInPixels(new StringBuilder("|"), textSurface.Font, textSurface.FontSize).Y);
+                start = 0;//TODO save
+
                 rowBool = true;
                 canSelect = true;
 
@@ -121,8 +127,41 @@ namespace IngameScript
             public void updateText()
             {
                 string text = "";
+                int length = rowCount;
+                bool down = false;
 
-                for (int i = 0; i < rowCount; i++)
+                if (rowCount > showableRows)
+                {
+                    length = showableRows;
+                }
+                else
+                {
+                    start = 0;
+                }
+
+                if (row < start)
+                {
+                    start = row;
+                }
+
+                if (start > 0)
+                {
+                    length -= 1;
+                    text += "/\\\n";
+                }
+
+                if (start + length < rowCount)
+                {
+                    length -= 1;
+                    down = true;
+                }
+
+                if (row >= start + length)
+                {
+                    start = row - (length - 1);
+                }
+
+                for (int i = start; i < start + length; i++)
                 {
                     if (i == row)
                     {
@@ -133,7 +172,11 @@ namespace IngameScript
                         text += "[ ]";
                     }
                     text += optionNames.ElementAt(i) + "\n";
+                }
 
+                if (down)
+                {
+                    text += "\\/";
                 }
 
                 textSurface.WriteText(text);
