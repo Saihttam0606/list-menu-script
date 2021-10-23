@@ -82,7 +82,11 @@ namespace IngameScript
                 }
 
                 showableRows = (int)(textSurface.SurfaceSize.Y / textSurface.MeasureStringInPixels(new StringBuilder("|"), textSurface.Font, textSurface.FontSize).Y);
-                start = 0;//TODO save
+                start = 0;
+                if (ini.ContainsKey("menu", "start"))
+                {
+                    start = ini.Get("menu", "start").ToInt32();
+                }
 
                 rowBool = true;
                 canSelect = true;
@@ -98,6 +102,7 @@ namespace IngameScript
                     throw new Exception(result.ToString());
 
                 ini.Set("menu", "selected", row);
+                ini.Set("menu", "start", start);
                 iniLocation.CustomData = ini.ToString();
             }
 
