@@ -11,11 +11,13 @@ count=Count of options you want
 control=Name of cockpit
 screen=Name of screen
 surface=(Optional)Number of screen on same block
+rows=(Optional)Limit the number of rows shown on screen, should be calculated internally, but can be overwritten here
 option0=Option Name
 option1=Option Name
 option2=Option Name
 ...
 selected=(Optional)Will be generated for saving
+start=(Optional)Will be generated for saving
 
 [options]
 0=Name of TimerBlock for First Option

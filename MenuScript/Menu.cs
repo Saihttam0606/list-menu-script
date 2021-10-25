@@ -82,6 +82,16 @@ namespace IngameScript
                 }
 
                 showableRows = (int)(textSurface.SurfaceSize.Y / textSurface.MeasureStringInPixels(new StringBuilder("|"), textSurface.Font, textSurface.FontSize).Y);
+
+                //Temporary fix for IMyTextSurface.SurfaceSize (probably) not being correct
+                if (surfaceNumber != 0)
+                    showableRows *= 2;
+
+                if (ini.ContainsKey("menu", "rows"))
+                {
+                    showableRows = ini.Get("menu", "rows").ToInt32();
+                }
+
                 start = 0;
                 if (ini.ContainsKey("menu", "start"))
                 {
